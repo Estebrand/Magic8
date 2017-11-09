@@ -1,52 +1,64 @@
 
+.stage {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+}
+
 
 .ball{
-	display: block;
-	width: 400px;
-	height: 400px;
-	margin: 0 auto;
-	position: relative;
+  display: block;
+  position: relative;
+  background: black;
+  border-radius: 50%;
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  background: radial-gradient(circle at 100px 100px, #537895, #000);
 
-	border-style: solid;
-	border-color: transparent;
-	border-radius: 50%;
 
-	background:black;
-  background: radial-gradient(circle at 100px 100px, #5cabff, #000)
-
+}
+.shadow {
+  position: absolute;
+  margin-top:-125px;
+  margin-left: -150px;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+  transform: rotateX(90deg) translateZ(-150px);
+  z-index: -1;
 }
 
 .center{
-	position: absolute;
-	width: 200px;
-	height: 200px;
+
+
+  display: block;
+  position: fixed;
+  background: black;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
 	top: 50%;
   left: 50%;
-  margin: -100px 0px 0px -100px;
-
-	background-color: transparent;
-	border-radius: 100%;
-
-  background: black /* For browsers that do not support gradients */
-  background: -webkit-radial-gradient(white, #d3d3d3, #545454); /* Safari 5.1 to 6.0 */
-  background: -o-radial-gradient(white, #d3d3d3, #545454); /* For Opera 11.6 to 12.0 */
-  background: -moz-radial-gradient(white, #d3d3d3, #545454); /* For Firefox 3.6 to 15 */
-  background: radial-gradient(white, #d3d3d3, #545454); /* Standard syntax */
-
+  margin: -160px 0px 0px -125px;
+  background: radial-gradient(circle at 100px 100px, white, #545454);
+	transform: translateX(-75px) translateY(-55px) skewX(-15deg) skewY(-2deg);
 }
 
 .triangle{
-	position: absolute;
+	position: fixed;
 
 	top: 50%;
   left: 50%;
-  margin: -100px 0px 0px -140px;
+  margin: -150px 0px 0px -180px;
 
 	border-radius: 0%;
-	border-left: 70px solid transparent;
-	border-right: 110px solid #537895;
-	border-top: 70px solid transparent;
-	border-bottom: 70px solid transparent;
+	border-left: 90px solid transparent;
+	border-right: 130px solid #537895;
+	border-top: 90px solid transparent;
+	border-bottom: 90px solid transparent;
 
 	transform: rotate(35deg);
 
@@ -57,7 +69,9 @@
 	color: white;
 	top: 50%;
   left: 50%;
-  margin: -10px 0px 0px 55px;
+  margin: -10px 0px 0px 65px;
 
   transform: rotate(-35deg);
 }
+
+
