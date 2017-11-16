@@ -20,30 +20,58 @@
 // "Outlook not so good"
 // "Very doubtful"
 
-num = Math.random();
-answer = "";
 
-$('submit').click(function()){
-		if num > 0.50 {
-			$('answer').html("yes!");
-		} else {
-			$('answer').html("no!");
-		};
-});
+$('#button').click(function(){
+	computerChoice = Math.random()
+		game(computerChoice)	 		
+	});
+
+
+
+
+function game(computerChoice){
+		
+
+			if (computerChoice  <= 0.33){
+		wisdom = `Yes`;
+	 } else if (computerChoice <= 0.66){
+		wisdom = `Maybe`;
+	 } else {
+		wisdom = `No`;
+	};
+
+
+
+
+}
+
+
+
+ 	$('#button').click(function(){
+		$('.answer').html(`${wisdom}`);
+	});
+
+
+
+// num = Math.random();
+// answer = "";
+
+// $('submit').click(function(){
+// 		if num >= 0.5 {
+// 			$('answer').html("yes!");
+// 		} else {
+// 			$('answer').html("no!");
+// 		};
+// });
+
 
 
 // ANIMATIONS
 
-// $.fn.animateRotate = function(angle, duration, easing, complete) {
-//   var args = $.speed(duration, easing, complete);
-//   var step = args.step;
-//   return this.each(function(i, e) {
-//     args.complete = $.proxy(args.complete, e);
-//     args.step = function(now) {
-//       $.style(e, 'transform', 'rotate(' + now + 'deg)');
-//       if (step) return step.apply(e, arguments);
-//     };
-
-//     $({deg: 0}).animate({deg: angle}, args);
-//   });
-// };
+// $("#button").click(function() {
+//   $('.triangle').toggleClass('triangle:active');
+// });
+$("#button").click(function() {
+  // not gonna work
+  $("#tri").removeClass(".triangle").addClass(".triangle-active");
+});

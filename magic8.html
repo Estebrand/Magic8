@@ -12,18 +12,28 @@
 <div class="container">
 	<div class="jumbotron text-center">
 		<h2>Magic 8 Ball</h2>
-		<h6> Input a Question</h6> 
+
+
+	<form action="submit" method="post">
+  <input type="text" placeholder="Ask a Question" class="form-control text-center" name="fname"><br>
+ 
+  <input type="button" value="Ask Away" id="button" class="btn btn-basic">
+</form>
+	
 	</div>
 
 	<section class="stage">
 		 <figure class="ball"><span class="shadow"></span></figure>
 					<figure class="center"></figure>
-							<figure id="triangle"></figure>
-									
-									<div class="answer">
-										<h4>Yes</h4>
+							<figure id="tri" class="triangle">
+										<h4 class="answer center-text">Yes</h4>
 
-								</div>
+							</figure>
+									
+
+								
+
+
 							
 
 						
